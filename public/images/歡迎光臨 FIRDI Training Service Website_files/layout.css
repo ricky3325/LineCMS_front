@@ -1,0 +1,45 @@
+#main {width:878px; margin:0 auto; position:relative;}
+
+#header {height:268px; position:relative;}
+#content, #footer , 
+#header{ font-size:0.8625em;}
+
+.col-1, .col-2, .col-3 { float:left;}
+
+/*======= index.html =======*/
+#page1 #content .line-ver { background-position:220px top;}
+#page1 #content .line-ver-top { background-position:220px top;}
+#page1 #content .col-1 {width:198px; margin-right:52px;}
+#page1 #content .col-2 { width:532px;}
+
+/*======= index-1.html =======*/
+#page2 #content .line-ver { background-position:220px top;}
+#page2 #content .line-ver-top1 { background-position:220px top;}
+#page2 #content .col-1 {width:198px; margin-right:52px;}
+#page2 #content .col-2 { width:532px;}
+
+/*======= index-2.html =======*/
+#page3 #content .line-ver { background-position:220px top;}
+#page3 #content .line-ver-top { background-position:220px top;}
+#page3 #content .col-1 {width:198px; margin-right:52px;}
+#page3 #content .col-2 { width:532px;}
+
+/*======= index-3.html =======*/
+#page4 #content .line-ver { background-position:220px top;}
+#page4 #content .line-ver-top1 { background-position:220px top;}
+#page4 #content .col-1 {width:198px; margin-right:52px;}
+#page4 #content .col-2 { width:532px;}
+#page4 #content .col-2 .col-1 { width:250px; margin-right:0;}
+#page4 #content .col-2 .col-2 { width:273px;}
+
+/*======= index-4.html =======*/
+#page5 #content .line-ver { background-position:220px top;}
+#page5 #content .line-ver-top1 { background-position:220px top;}
+#page5 #content .col-1 {width:198px; margin-right:52px;}
+#page5 #content .col-2 { width:532px;}
+
+
+/*=========================*/
+
+
+#footer { border-top:3px solid #7cc2fc; padding:10px 0 38px 0; text-align:center; font-size:1.05em;}

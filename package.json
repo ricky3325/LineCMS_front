@@ -1,0 +1,94 @@
+{
+  "name": "firdiedu",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@progress/kendo-data-query": "^1.5.5",
+    "@progress/kendo-drawing": "^1.16.2",
+    "@progress/kendo-editor-vue-wrapper": "^2021.2.908",
+    "@progress/kendo-gantt-vue-wrapper": "^2021.3.914",
+    "@progress/kendo-inputs-vue-wrapper": "^2021.2.617",
+    "@progress/kendo-licensing": "^1.1.4",
+    "@progress/kendo-scheduler-vue-wrapper": "^2021.2.617",
+    "@progress/kendo-theme-default": "^4.41.0",
+    "@progress/kendo-ui": "^2021.2.616",
+    "@progress/kendo-vue-animation": "^2.2.3",
+    "@progress/kendo-vue-data-tools": "^2.2.3",
+    "@progress/kendo-vue-dateinputs": "^2.2.3",
+    "@progress/kendo-vue-dialogs": "^2.4.3",
+    "@progress/kendo-vue-dropdowns": "^2.2.3",
+    "@progress/kendo-vue-grid": "^2.2.3",
+    "@progress/kendo-vue-inputs": "^2.2.3",
+    "@progress/kendo-vue-intl": "^2.2.3",
+    "@progress/kendo-vue-popup": "^2.2.3",
+    "@progress/kendo-vue-upload": "^2.3.0",
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.0",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.6.5",
+    "devextreme-vue": "21.1.5",
+    "dhtmlx-gantt": "^7.1.6",
+    "element": "^0.1.4",
+    "element-ui": "^2.15.2",
+    "moment": "^2.29.1",
+    "vee-validate": "^2.1.7",
+    "vue": "^2.6.11",
+    "vue-axios": "^3.2.4",
+    "vue-bootstrap-pagination": "^2.10.3",
+    "vue-i18n": "^8.24.4",
+    "vue-loading-overlay": "^3.0.1",
+    "vue-qr": "^3.2.4",
+    "vue-router": "^3.2.0",
+    "vue-select-image": "^1.9.0",
+    "vue-toast-notification": "^0.6.2",
+    "vue-toastr": "^2.1.2",
+    "vue-uuid": "^2.0.2",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.45.1",
+    "sass-loader": "8.0.0",
+    "vselect-component": "^1.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/prettier"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "no-unused-vars": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
