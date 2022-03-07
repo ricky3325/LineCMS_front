@@ -1,6 +1,6 @@
 <template>
 <div>
-<div><H4 style="color:purple;">加入社區</H4></div>    
+<div><H4 style="color:purple;">客戶綁定資訊</H4></div>    
 <div style="padding: 20px;">
 </div>  
 <div ref="divWrapper" style="padding: 30px">
@@ -25,56 +25,16 @@
                     @printDoc="printDoc"
                     @edit="edit"
                     @remove="remove"/>
-        </template>       
-        <grid-toolbar>
-            <button title="新增社區"
-                    class="k-button k-primary"
-                    @click='OpenAddNews' >
-                新增社區
-            </button>
-        </grid-toolbar>      
+        </template>             
         <grid-norecords name="classInfo-grid-norecords">
            <div  class="k-loading-mask customPosition"><span class='k-loading-text'></span><div class='k-loading-image'/><div class='k-loading-color'/></div>
         </grid-norecords>            
     </Grid>
-</div>
-    <div id="containerAddNews" class="modal-dialog modal-lg">
-        <b-modal id="bv-modal-add-news" hide-footer  hide-header-close no-close-on-esc no-close-on-backdrop>
-            <template #modal-title>
-                產生社區Line通知網址
-            </template> 
-            <form  @submit.prevent="onSubmitAddNews">
-            <!-- <form> -->  
-                <div class="form-group">
-                    <div margin-left="auto" margin-right="auto">
-                        <div class="form-row" style="margin-right: 0px;margin-left: 0px;width: 100%;">
-                            <div class="input-group" style="padding-left: 10px;padding-right: 10px;width: 100%;">
-                                <div class="input-group-prepend" style="margin-left: 0px;"><span class="input-group-text" style="width: 150px;">社區名稱<br></span></div>
-                                <input v-model="currentCommunityName" class="form-control" type="text" style="margin-right: 0px;padding-left: 10px;" required>
-                                <div class="input-group-append"></div>
-                            </div>
-                            <div class="input-group" style="padding-left: 10px;padding-right: 10px;width: 100%;">
-                                <div class="input-group-prepend" style="margin-left: 0px;"><span class="input-group-text" style="width: 150px;">客戶代號<br></span></div>
-                                <input v-model="currentCommunityCode" class="form-control" type="text" style="margin-right: 0px;padding-left: 10px;" required>
-                                <div class="input-group-append"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="d-xl-flex justify-content-xl-center align-items-xl-center" style="text-align: center;height: 0px;padding-top: 30px;">
-                        <button type="submit" class="btn btn-primary" style="margin: 5px;" id="send">產生網址</button>
-                        <button  type="button" class="btn btn-secondary" style="margin: 5px;" @click="$bvModal.hide('bv-modal-add-news');CancelAdd();">關閉</button>
-                    </div>
-                </div>
-            </form>
-            <br/>
-        </b-modal>
-    </div> 
+</div> 
     <div id="containerEditNews" class="modal-dialog modal-lg">
         <b-modal id="bv-modal-edit-news" hide-footer  hide-header-close no-close-on-esc no-close-on-backdrop>
             <template #modal-title>
-                編輯社區資訊
+                編輯個人資訊
             </template> 
             <form  @submit.prevent="onSubmitEditNews">
             <!-- <form> -->  
@@ -82,13 +42,8 @@
                     <div margin-left="auto" margin-right="auto">
                         <div class="form-row" style="margin-right: 0px;margin-left: 0px;width: 100%;">
                             <div class="input-group" style="padding-left: 10px;padding-right: 10px;width: 100%;">
-                                <div class="input-group-prepend" style="margin-left: 0px;"><span class="input-group-text" style="width: 150px;">客戶代號<br></span></div>
-                                <input v-model="currentCommunityCode" class="form-control" type="text" style="margin-right: 0px;padding-left: 10px;" readonly>
-                                <div class="input-group-append"></div>
-                            </div>
-                            <div class="input-group" style="padding-left: 10px;padding-right: 10px;width: 100%;">
-                                <div class="input-group-prepend" style="margin-left: 0px;"><span class="input-group-text" style="width: 150px;">社區名稱<br></span></div>
-                                <input v-model="currentCommunityName" class="form-control" type="text" style="margin-right: 0px;padding-left: 10px;" required>
+                                <div class="input-group-prepend" style="margin-left: 0px;"><span class="input-group-text" style="width: 150px;">編輯姓名<br></span></div>
+                                <input v-model="currentCommunityName" class="form-control" type="text" style="margin-right: 0px;padding-left: 10px;">
                                 <div class="input-group-append"></div>
                             </div>
                         </div>
@@ -103,30 +58,7 @@
             </form>
             <br/>
         </b-modal>
-    </div> 
-    <div id="showURL" class="modal-dialog modal-lg">
-        <b-modal id="bv-modal-show-url" hide-footer  hide-header-close no-close-on-esc no-close-on-backdrop>
-            <template #modal-title>
-                {{currentCommunityName}}社區Line通知網址
-            </template> 
-            <form  @submit.prevent="onSubmitShowUrl">
-            <!-- <form> -->  
-                <div class="form-group">
-                    <div margin-left="auto" margin-right="auto">
-                        
-                    </div>
-                    <!--div>
-                            {{currentURL}}
-                    </div-->
-                    
-                    <div class="d-xl-flex justify-content-xl-center align-items-xl-center" style="text-align: center;height: 0px;padding-top: 30px;">
-                        <button  type="button" class="btn btn-secondary" style="margin: 5px;" @click="$bvModal.hide('bv-modal-show-url');CancelAdd();">關閉</button>
-                    </div>
-                </div>
-            </form>
-            <br/>
-        </b-modal>
-    </div> 
+    </div>
     <vue-toastr ref="toastr"></vue-toastr>         
 </div>
 </template>
@@ -172,6 +104,7 @@ export default {
             currentCommunityName:'',
             currentURL:'',
             currentCommunityCode:'',
+            currentCommunityToken:'',
             currentCommunityGuid:'',
             };
     },
@@ -181,7 +114,8 @@ export default {
                 { cell: 'myTemplate', width: '165px' },
                 { hidden: true, field: 'guid', title: 'guid', width: '100px' },
                 { field: 'title', title: '客戶代號', width: this.setPercentage(20) },
-                { field: 'content', title: 'Token' , width: this.setPercentage(20)},    
+                { field: 'content', title: 'Token' , width: this.setPercentage(20)},
+                { field: 'name', title: '姓名' , width: this.setPercentage(20)},    
           ];
       },        
         items () {
@@ -209,7 +143,12 @@ export default {
                 });*/
         }, 
         remove(dataItem) {
-            const qs = require('qs');
+            Vue.$toast.open({
+                        message: '系統維護中',
+                        position: 'bottom-right',
+                        type: 'success'
+                        });
+            /*const qs = require('qs');
             axios.post(this.$httpPath+'/addscriber/delOneNick', 
                 qs.stringify({
                     _id:dataItem.id,
@@ -227,7 +166,7 @@ export default {
                         });
                         this.refreshGrid();
                     }
-                })
+                })*/
         },
         refreshGrid()
         {
@@ -249,6 +188,7 @@ export default {
             this.currentURL = '';
             this.currentCommunityCode = '';
             this.currentCommunityGuid = '';
+            this.currentCommunityToken='';
         },            
         setPercentage (percentage) {
             return Math.round(this.gridWidth / 100) * percentage;
@@ -284,8 +224,10 @@ export default {
         edit(dataItem) {
             this.OpenEditNews();
             this.currentCommunityGuid = dataItem.id;
-            this.currentCommunityName = dataItem.relName;
-            this.currentCommunityCode = dataItem.nickName;
+            this.currentCommunityName = dataItem.name;
+            this.currentCommunityCode = dataItem.title;
+            this.currentCommunityToken = dataItem.content;
+
         },
         OpenEditNews (event) {
             this.$bvModal.show('bv-modal-edit-news');
@@ -295,7 +237,12 @@ export default {
         },
         onSubmitEditNews: async function ()
         {
-            const qs = require('qs');
+            Vue.$toast.open({
+                        message: '系統維護中',
+                        position: 'bottom-right',
+                        type: 'success'
+                        });
+            /*const qs = require('qs');
             axios.post(this.$httpPath+'/addscriber/editNick', 
                 qs.stringify({
                     _id: this.currentCommunityGuid,
@@ -315,7 +262,7 @@ export default {
                         this.CloseEditNews();
                         this.CancelAdd();
                     }
-                })
+                })*/
         },
         createLineURL(){
             //this.$bvModal.show('bv-modal-show-url');

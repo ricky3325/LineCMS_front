@@ -30,6 +30,9 @@
                         <el-menu-item-group>
                           <el-menu-item index="/showQR" style="color: rgb(255, 208, 75)">查詢 QR Code</el-menu-item>
                         </el-menu-item-group>
+                        <el-menu-item-group>
+                          <el-menu-item index="/AddSuber" style="color: rgb(255, 208, 75)">綁定資訊</el-menu-item>
+                        </el-menu-item-group>
                       </el-submenu>
     
                       <el-submenu index="3">
