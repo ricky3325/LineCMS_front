@@ -143,17 +143,12 @@ export default {
                 });*/
         }, 
         remove(dataItem) {
-            Vue.$toast.open({
-                        message: '系統維護中',
-                        position: 'bottom-right',
-                        type: 'success'
-                        });
-            /*const qs = require('qs');
-            axios.post(this.$httpPath+'/addscriber/delOneNick', 
+            const qs = require('qs');
+            axios.post(this.$httpPath+'/addscriber/deleteInfo', 
                 qs.stringify({
                     _id:dataItem.id,
-                    relName:dataItem.relName,
-                    nickName:dataItem.nickName
+                    title:dataItem.title,
+                    content:dataItem.content
                 }),
             )
             .then((response)=>{
@@ -166,7 +161,7 @@ export default {
                         });
                         this.refreshGrid();
                     }
-                })*/
+                })
         },
         refreshGrid()
         {
@@ -237,17 +232,11 @@ export default {
         },
         onSubmitEditNews: async function ()
         {
-            Vue.$toast.open({
-                        message: '系統維護中',
-                        position: 'bottom-right',
-                        type: 'success'
-                        });
-            /*const qs = require('qs');
-            axios.post(this.$httpPath+'/addscriber/editNick', 
+            const qs = require('qs');
+            axios.post(this.$httpPath+'/addscriber/editInfo', 
                 qs.stringify({
                     _id: this.currentCommunityGuid,
-                    relName:this.currentCommunityName,
-                    nickName:this.currentCommunityCode
+                    name:this.currentCommunityName
                 }),
             )
             .then((response)=>{
@@ -262,7 +251,7 @@ export default {
                         this.CloseEditNews();
                         this.CancelAdd();
                     }
-                })*/
+                })
         },
         createLineURL(){
             //this.$bvModal.show('bv-modal-show-url');
