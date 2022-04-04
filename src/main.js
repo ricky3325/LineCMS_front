@@ -46,7 +46,7 @@ Vue.component('ValidationObserver', ValidationObserver)
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
-Vue.prototype.$httpPath = "http://35.194.229.108"
+Vue.prototype.$httpPath = "http://59.127.185.48"
 
 //Vue.prototype.$httpPath = "https://localhost:44344/api"
 Vue.prototype.$httpPath_front = "https://localhost";

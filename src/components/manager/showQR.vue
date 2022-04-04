@@ -79,7 +79,7 @@ export default {
         },
         createLineURL(){
             this.$bvModal.hide('bv-modal-add-news');
-            this.currentURL = 'http://35.194.229.108/addscriber/reRoute?code='+ this.currentSendGroup
+            this.currentURL = this.$httpPath+'/addscriber/reRoute?code='+ this.currentSendGroup
             this.$router.push(
                 {
                     path: '/QRcode',
